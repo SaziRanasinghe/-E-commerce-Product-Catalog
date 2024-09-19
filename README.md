@@ -38,15 +38,19 @@ server/
   - React
   - React Router
   - Axios
+    
 **Backend:**
   - Node.js
   - Express
   - Mongoose
   - Nodemon
+    
 **Database:**
   - MongoDB
+    
 **Utilities:**
   - Concurrently
   - Dotenv
+    
 **API Testing:**
   - Postman

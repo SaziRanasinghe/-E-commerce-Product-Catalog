@@ -3,11 +3,11 @@
 
 # Installation Instructions
 1. Clone the repository
-    git clone https://github.com/your-username/ecommerce-catalogue.git
+    git clone https://github.com/SaziRanasinghe/E-commerce-Product-Catalog.git
     cd ecommerce-catalogue
-2. Create a .env file in both the client and server directories to store environment-specific variables
-3. Install Dependencies - npm install
-4. Run the Application - npm start
+3. Create a .env file in both the client and server directories to store environment-specific variables
+4. Install Dependencies - npm install
+5. Run the Application - npm start
 
 # Architecture
 *The project follows a client-server architecture, separating the frontend and backend into distinct modules for better scalability and maintainability.*
@@ -21,6 +21,7 @@ client/
 │   └── index.js
 ├── package.json
 └── .env
+
 server/
 ├── controllers/
 ├── models/
@@ -34,18 +35,18 @@ server/
 
 # Technologies Used
 **Frontend:**
-  React
-  React Router
-  Axios
+  - React
+  - React Router
+  - Axios
 **Backend:**
-  Node.js
-  Express
-  Mongoose
-  Nodemon
+  - Node.js
+  - Express
+  - Mongoose
+  - Nodemon
 **Database:**
-  MongoDB
+  - MongoDB
 **Utilities:**
-  Concurrently
-  Dotenv
+  - Concurrently
+  - Dotenv
 **API Testing:**
-  Postman
+  - Postman

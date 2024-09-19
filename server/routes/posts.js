@@ -59,7 +59,7 @@ router.put('/post/update/:id', async (req, res) => {
         const updatedPost = await posts.findByIdAndUpdate(
             req.params.id,
             { $set: req.body },
-            { new: true } // returns the updated document
+            { new: true }  
         );
         res.status(200).json({
             success: "Updated successfully",
@@ -86,7 +86,7 @@ router.delete("/post/delete/:id", (req, res) => {
 });
   
 
-// GET /products?category=electronics&sort=price
+// GET  
 router.get('/products', async (req, res) => {
     try {
       const { category, sort } = req.query;
@@ -102,38 +102,5 @@ router.get('/products', async (req, res) => {
     }
   });
 
-  // GET /posts?category=technology&sort=topic
-// router.get('/posts', async (req, res) => {
-//     try {
-//       const { postCategory, sort } = req.query;
-//       const cacheKey = `posts:${postCategory || 'all'}:${sort || 'default'}`;
-  
-//       // Check Redis cache
-//       redisClient.get(cacheKey, async (err, cachedPosts) => {
-//         if (err) {
-//           console.error('Redis error:', err);
-//           return res.status(500).json({ error: 'Server error' });
-//         }
-  
-//         if (cachedPosts) {
-//           // Return cached data
-//           return res.json(JSON.parse(cachedPosts));
-//         }
-  
-//         // Fetch from MongoDB if not cached
-//         const filter = postCategory ? { postCategory } : {};
-//         const sortOptions = sort ? { [sort]: 1 } : {};
-  
-//         const posts = await Posts.find(filter).sort(sortOptions);
-  
-//         // Cache the result
-//         redisClient.setex(cacheKey, 3600, JSON.stringify(posts)); // Cache for 1 hour
-  
-//         res.json(posts);
-//       });
-//     } catch (error) {
-//       res.status(500).json({ error: 'Failed to fetch posts' });
-//     }
-//   });
   
 module.exports = router;
